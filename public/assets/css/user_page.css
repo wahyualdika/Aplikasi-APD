@@ -1,0 +1,90 @@
+.body{
+  background-color: #0c5b94;
+}
+
+.user_panel{
+  width: 20%;
+  height: 100%;
+  background-color: #5c5cd6;
+  position:fixed;
+  z-index: 1;
+}
+
+.circular--square {
+  border-radius: 50%;
+  height: 200px;
+  margin: 50px;
+}
+
+.btn-danger {
+  margin-left: 100px;
+  margin-top: 0px;
+  padding: 100x;
+}
+
+.btn-warning{
+  margin-left: 55px;
+  padding: 100x;
+}
+
+.btn-primary {
+  margin-left: 105px;
+  padding: 100x;
+}
+
+.data-area{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.form-edit-profile{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 50%;
+    height: 50%;
+}
+
+.daftar-belanja{
+  position: absolute;
+  top: 5%;
+  left:20%;
+  margin: 50px;
+  width: 500px;
+  height: 150px;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.belanja{
+  position: absolute;
+  top: 15%;
+  left: 150px;
+  margin: 50px;
+  width: 500px;
+  height: 150px;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.belanja-title{
+  text-align: center;
+}
+
+.daftar-belanja-title{
+  text-align: center;
+}
+
+.fa-cart-custom{
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+
+.fa-pill-custom{
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
