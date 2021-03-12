@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
 
 class AdminController extends Controller
 {
@@ -103,6 +104,19 @@ class AdminController extends Controller
 
       if($admin->save()){
         return redirect()->route('admin.home');
+      }
+    }
+
+    public function deleteAdmin($id){
+      $admin = Admin::findOrFail($id);
+      if(Auth::user()->is_admin === 1){
+        if(Auth::user()->id === $admin->id){
+          return redirect('/admins')->with('deleted-fail', 'You are not Authorized');
+        }
+        else{
+          $admin->delete();
+          return redirect('/admins')->with('deleted-success', 'Data has been deleted');
+        }
       }
     }
 

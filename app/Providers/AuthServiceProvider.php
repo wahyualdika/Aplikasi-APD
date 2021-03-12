@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Auth;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -28,6 +30,19 @@ class AuthServiceProvider extends ServiceProvider
     		Passport::routes();
     		Passport::tokensExpireIn(now()->addDays(1));
 
-        //
+        // Gate::define('delete-admin', function (Admin $admin) {
+        //   dd($admin->id);
+        //     if($user->is_admin == 1){
+        //       if($user->id == $id){
+        //         return false;
+        //       }
+        //       else{
+        //         return true;
+        //       }
+        //     }
+        //     else{
+        //       return false;
+        //     }
+        // });
     }
 }

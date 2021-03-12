@@ -115,6 +115,7 @@ Route::put('/admin/{id}/edit', [AdminController::class, 'editAdmin'])->name('adm
 Route::get('/admin/form', [AdminController::class, 'addAdminForm'])->name('admin.form');
 Route::post('/admin/form', [AdminController::class, 'addAdmin'])->name('admin.submit');
 Route::get('/admins', [AdminController::class, 'allAdmin'])->name('admin.all');
+Route::post('/admins/{id}/delete', [AdminController::class, 'deleteAdmin'])->name('admin.delete');
 Route::get('/admin/home', [AdminController::class, 'homeAdmin'])->name('admin.home');
 Route::get('/admin/products/list', [AdminController::class, 'listProduct'])->name('admin.product.list');
 Route::get('/admin/product/form/',[AdminController::class,'formInputProduct'])->name('admin.product.form');
